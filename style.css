@@ -1,0 +1,14 @@
+#remote-video{
+	background-color: red;
+	width: 640px;
+	height: 480px;
+}
+#local-video{
+	width: 320px;
+	height: 240px;
+}
+#local-video-canvas{
+	background-color: green;
+	width: 320px;
+	height: 240px;
+}

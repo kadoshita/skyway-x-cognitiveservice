@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>SkyWay × cognitive service</title>
+
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="./style.css">
+
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+	<script src="./main.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="row" id="remote-video-area">
+					<div class="col-md-12">
+						<video id="remote-video" autoplay></video>
+					</div>
+				</div>
+				<div class="row" id="local-video-area">
+					<div class="col-md-12">
+						<video id="local-video" autoplay muted></video>
+						<canvas id="local-video-canvas"></canvas>
+					</div>
+				</div>
+			</div>
+			<dic class="col-md-4">
+				<div class="row" id="peer-config-area">
+					<div class="col-md-12">
+						<p id="my-id"></p>
+						<form class="form-inline">
+							<label for="peer-id">Peer ID</label>
+							<input type="text" class="form-control" id="peer-id">
+							<button class="btn btn-default" id="connect-button">Connect</button>
+						</form>
+					</div>
+				</div>
+				<div class="row" id="result">
+					<table class="table table-hover">
+						<tbody>
+							<tr>
+								<th>年齢</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="age"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>性別</th>
+								<td id="gender"></td>
+							</tr>
+							<tr>
+								<th>眼鏡</th>
+								<td id="grass"></td>
+							</tr>
+							<tr>
+								<th>怒り</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="anger"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>軽蔑</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="contempt"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>嫌悪</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="disgust"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>恐怖</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="fear"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>幸福</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="happiness"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>普通</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="neutral"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>悲しみ</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="sadness"></div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>驚き</th>
+								<td>
+									<div class="progress">
+										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="surprise"></div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</dic>
+		</div>
+	</div>
+</body>
+</html>
